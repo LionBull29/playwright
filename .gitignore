@@ -1,0 +1,8 @@
+*.html
+*.xml
+.idea
+report
+venv
+.pabotsuitenames
+chromedriver.exe
+.pytest_cache
