@@ -1,0 +1,22 @@
+
+def test_working_with_the_basket(page):
+
+    page.goto("https://www.saucedemo.com/")
+    page.locator("[data-test=\"username\"]").click()
+    page.locator("[data-test=\"username\"]").fill("standard_user")
+    page.locator("[data-test=\"password\"]").click()
+    page.locator("[data-test=\"password\"]").fill("secret_sauce")
+    page.locator("[data-test=\"login-button\"]").click()
+    page.locator("[data-test=\"add-to-cart-sauce-labs-backpack\"]").click()
+    page.locator("[data-test=\"add-to-cart-sauce-labs-bike-light\"]").click()
+    page.locator("[data-test=\"add-to-cart-sauce-labs-bolt-t-shirt\"]").click()
+    page.locator("[data-test=\"add-to-cart-sauce-labs-fleece-jacket\"]").click()
+    page.locator("a").filter(has_text="4").click()
+    page.get_by_text("1Sauce Labs Backpackcarry.allTheThings() with the sleek, streamlined Sly Pack th").click()
+    page.locator("[data-test=\"remove-sauce-labs-backpack\"]").click()
+    page.locator("[data-test=\"remove-sauce-labs-bolt-t-shirt\"]").click()
+    page.locator("[data-test=\"checkout\"]").click()
+    page.locator("[data-test=\"cancel\"]").click()
+    page.locator("[data-test=\"continue-shopping\"]").click()
+    page.locator("a").filter(has_text="2").click()
+    page.locator("[data-test=\"remove-sauce-labs-fleece-jacket\"]").click()
